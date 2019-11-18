@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<CAEXFile FileName="output.aml" SchemaVersion="2.15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="CAEX_ClassModel_V2.15.xsd">
+    <AdditionalInformation>
+        <WriterHeader>
+            <WriterName>AML Exporter</WriterName>
+            <WriterID>916578CA-FE0D-474E-A4FC-9E1719892369</WriterID>
+            <WriterVendor>ipr.kit.edu</WriterVendor>
+            <WriterVendorURL>www.ipr.kit.edu</WriterVendorURL>
+            <WriterVersion>0.0.1</WriterVersion>
+            <WriterRelease>0.0.1</WriterRelease>
+            <LastWritingDateTime>20191118_124540</LastWritingDateTime>
+            <WriterProjectTitle>AML Framework</WriterProjectTitle>
+            <WriterProjectID>unspecified</WriterProjectID>
+        </WriterHeader>
+    </AdditionalInformation>
+    <AdditionalInformation AutomationMLVersion="2.0"/>
+    <InstanceHierarchy Name="result_q1">
+        <InternalElement ID="7548d63e-755d-4819-9e68-21d0826585a3" Name="placeholder">
+            <ExternalInterface ID="32D1045E-5069-45BB-9DFB-DDA17BC7F27B" Name="14" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector/COLLADAInterface">
+                <Attribute AttributeDataType="xs:anyURI" Name="refURI">
+                    <Value>./dae_lib/F19721000063102000100_001_zb_hb_vorrichtung001_layout_kin_Product.dae</Value>
+                </Attribute>
+                <Attribute Name="refType">
+                    <Value>explicit</Value>
+                </Attribute>
+            </ExternalInterface>
+        </InternalElement>
+    </InstanceHierarchy>
+    <InstanceHierarchy Name="result_q2">
+        <InternalElement ID="AF138E59-0000-17AC-556E-BC030000331D" Name="13">
+            <Attribute Name="Frame">
+                <Attribute AttributeDataType="xs:double" Name="x" Unit="m">
+                    <Value>-7.5</Value>
+                </Attribute>
+                <Attribute AttributeDataType="xs:double" Name="y" Unit="m">
+                    <Value>4.87</Value>
+                </Attribute>
+                <Attribute AttributeDataType="xs:double" Name="z" Unit="m">
+                    <Value>0</Value>
+                </Attribute>
+                <Attribute Name="rx">
+                    <Value>-180</Value>
+                </Attribute>
+                <Attribute Name="ry">
+                    <Value>0</Value>
+                </Attribute>
+                <Attribute Name="rz">
+                    <Value>0</Value>
+                </Attribute>
+            </Attribute>
+            <ExternalInterface ID="32D1045E-5069-45BB-9DFB-DDA17BC7F27B" Name="14" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector/COLLADAInterface">
+                <Attribute AttributeDataType="xs:anyURI" Name="refURI">
+                    <Value>./dae_lib/F19721000063102000100_001_zb_hb_vorrichtung001_layout_kin_Product.dae</Value>
+                </Attribute>
+                <Attribute Name="refType">
+                    <Value>explicit</Value>
+                </Attribute>
+            </ExternalInterface>
+            <InternalElement ID="AF138E59-0000-17AC-556E-BC4600003328" Name="15">
+                <Attribute Name="Frame">
+                    <Attribute AttributeDataType="xs:double" Name="x" Unit="m">
+                        <Value>-1.365</Value>
+                    </Attribute>
+                    <Attribute AttributeDataType="xs:double" Name="y" Unit="m">
+                        <Value>0</Value>
+                    </Attribute>
+                    <Attribute AttributeDataType="xs:double" Name="z" Unit="m">
+                        <Value>-1.795</Value>
+                    </Attribute>
+                    <Attribute Name="rx">
+                        <Value>0</Value>
+                    </Attribute>
+                    <Attribute Name="ry">
+                        <Value>0</Value>
+                    </Attribute>
+                    <Attribute Name="rz">
+                        <Value>0</Value>
+                    </Attribute>
+                </Attribute>
+                <RoleRequirements RefBaseRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Frame"/>
+            </InternalElement>
+            <InternalElement ID="AF138E59-0000-17AC-556E-BC460000332D" Name="16">
+                <RoleRequirements RefBaseRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Structure"/>
+            </InternalElement>
+            <RoleRequirements RefBaseRoleClassPath="AutomationMLExtendedRoleClassLib/Clamp"/>
+        </InternalElement>
+    </InstanceHierarchy>
+    <InstanceHierarchy Name="result_q3">
+        <InternalElement ID="1a6e884c-89a4-4cc0-a1b5-b943060a03bc" Name="placeholder">
+            <ExternalInterface ID="32D1045E-5069-45BB-9DFB-DDA17BC7F27B" Name="14" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector/COLLADAInterface">
+                <Attribute AttributeDataType="xs:anyURI" Name="refURI">
+                    <Value>./dae_lib/F19721000063102000100_001_zb_hb_vorrichtung001_layout_kin_Product.dae</Value>
+                </Attribute>
+                <Attribute Name="refType">
+                    <Value>explicit</Value>
+                </Attribute>
+            </ExternalInterface>
+        </InternalElement>
+    </InstanceHierarchy>
+    <InstanceHierarchy Name="result_q4">
+        <InternalElement ID="77c0453e-3f4b-46eb-97a9-dbee5db4456b" Name="r1">
+            <InternalElement ID="AF138E59-0000-17AC-556E-B85100003266" Name="5">
+                <Attribute Name="Frame">
+                    <Attribute AttributeDataType="xs:double" Name="x" Unit="m">
+                        <Value>-7.366172</Value>
+                    </Attribute>
+                    <Attribute AttributeDataType="xs:double" Name="y" Unit="m">
+                        <Value>6.379493</Value>
+                    </Attribute>
+                    <Attribute AttributeDataType="xs:double" Name="z" Unit="m">
+                        <Value>2.394861</Value>
+                    </Attribute>
+                    <Attribute Name="rx">
+                        <Value>4.499</Value>
+                    </Attribute>
+                    <Attribute Name="ry">
+                        <Value>90</Value>
+                    </Attribute>
+                    <Attribute Name="rz">
+                        <Value>0</Value>
+                    </Attribute>
+                </Attribute>
+                <RoleRequirements RefBaseRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Structure"/>
+            </InternalElement>
+            <InternalElement ID="AF138E59-0000-17AC-556E-B81A00003240" Name="3">
+                <Attribute Name="Frame">
+                    <Attribute AttributeDataType="xs:double" Name="x" Unit="m">
+                        <Value>-7.4</Value>
+                    </Attribute>
+                    <Attribute AttributeDataType="xs:double" Name="y" Unit="m">
+                        <Value>7.6</Value>
+                    </Attribute>
+                    <Attribute AttributeDataType="xs:double" Name="z" Unit="m">
+                        <Value>1</Value>
+                    </Attribute>
+                    <Attribute Name="rx">
+                        <Value>0</Value>
+                    </Attribute>
+                    <Attribute Name="ry">
+                        <Value>0</Value>
+                    </Attribute>
+                    <Attribute Name="rz">
+                        <Value>0</Value>
+                    </Attribute>
+                </Attribute>
+                <RoleRequirements RefBaseRoleClassPath="AutomationMLDMIRoleClassLib/DiscManufacturingEquipment/Robot"/>
+            </InternalElement>
+        </InternalElement>
+        <InternalElement ID="1cec35d5-c165-4e26-9624-1bbefa02f0f6" Name="r2">
+            <InternalElement ID="AF138E59-0000-17AC-556E-B8F6000032C7" Name="9">
+                <Attribute Name="Frame">
+                    <Attribute AttributeDataType="xs:double" Name="x" Unit="m">
+                        <Value>-7.491077</Value>
+                    </Attribute>
+                    <Attribute AttributeDataType="xs:double" Name="y" Unit="m">
+                        <Value>3.60465</Value>
+                    </Attribute>
+                    <Attribute AttributeDataType="xs:double" Name="z" Unit="m">
+                        <Value>2.650281</Value>
+                    </Attribute>
+                    <Attribute Name="rx">
+                        <Value>73.172</Value>
+                    </Attribute>
+                    <Attribute Name="ry">
+                        <Value>34.473</Value>
+                    </Attribute>
+                    <Attribute Name="rz">
+                        <Value>97.709</Value>
+                    </Attribute>
+                </Attribute>
+                <RoleRequirements RefBaseRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Structure"/>
+            </InternalElement>
+            <InternalElement ID="AF138E59-0000-17AC-556E-B8BD000032A2" Name="7">
+                <Attribute Name="Frame">
+                    <Attribute AttributeDataType="xs:double" Name="x" Unit="m">
+                        <Value>-9.3</Value>
+                    </Attribute>
+                    <Attribute AttributeDataType="xs:double" Name="y" Unit="m">
+                        <Value>2.8</Value>
+                    </Attribute>
+                    <Attribute AttributeDataType="xs:double" Name="z" Unit="m">
+                        <Value>1</Value>
+                    </Attribute>
+                    <Attribute Name="rx">
+                        <Value>0</Value>
+                    </Attribute>
+                    <Attribute Name="ry">
+                        <Value>0</Value>
+                    </Attribute>
+                    <Attribute Name="rz">
+                        <Value>0</Value>
+                    </Attribute>
+                </Attribute>
+                <RoleRequirements RefBaseRoleClassPath="AutomationMLDMIRoleClassLib/DiscManufacturingEquipment/Robot"/>
+            </InternalElement>
+        </InternalElement>
+    </InstanceHierarchy>
+    <InstanceHierarchy Name="result_q5">
+        <InternalElement ID="AF138E59-0000-17AC-556E-B8BD000032A2" Name="7">
+            <Attribute Name="Frame">
+                <Attribute AttributeDataType="xs:double" Name="x" Unit="m">
+                    <Value>-9.3</Value>
+                </Attribute>
+                <Attribute AttributeDataType="xs:double" Name="y" Unit="m">
+                    <Value>2.8</Value>
+                </Attribute>
+                <Attribute AttributeDataType="xs:double" Name="z" Unit="m">
+                    <Value>1</Value>
+                </Attribute>
+                <Attribute Name="rx">
+                    <Value>0</Value>
+                </Attribute>
+                <Attribute Name="ry">
+                    <Value>0</Value>
+                </Attribute>
+                <Attribute Name="rz">
+                    <Value>0</Value>
+                </Attribute>
+            </Attribute>
+            <RoleRequirements RefBaseRoleClassPath="AutomationMLDMIRoleClassLib/DiscManufacturingEquipment/Robot"/>
+        </InternalElement>
+        <InternalElement ID="AF138E59-0000-17AC-556E-B961000032DB" Name="11">
+            <Attribute Name="Frame">
+                <Attribute AttributeDataType="xs:double" Name="x" Unit="m">
+                    <Value>-9.7</Value>
+                </Attribute>
+                <Attribute AttributeDataType="xs:double" Name="y" Unit="m">
+                    <Value>4.6</Value>
+                </Attribute>
+                <Attribute AttributeDataType="xs:double" Name="z" Unit="m">
+                    <Value>1</Value>
+                </Attribute>
+                <Attribute Name="rx">
+                    <Value>0</Value>
+                </Attribute>
+                <Attribute Name="ry">
+                    <Value>0</Value>
+                </Attribute>
+                <Attribute Name="rz">
+                    <Value>90</Value>
+                </Attribute>
+            </Attribute>
+            <RoleRequirements RefBaseRoleClassPath="AutomationMLDMIRoleClassLib/DiscManufacturingEquipment/Robot"/>
+        </InternalElement>
+    </InstanceHierarchy>
+    <InstanceHierarchy Name="result_q6">
+        <InternalElement ID="fbfb1e27-36fe-4a90-8197-7bba2c3f5f0b" Name="placeholder">
+            <ExternalInterface ID="32D1045E-5069-45BB-9DFB-DDA17BC7F27B" Name="14" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector/COLLADAInterface">
+                <Attribute AttributeDataType="xs:anyURI" Name="refURI">
+                    <Value>./dae_lib/F19721000063102000100_001_zb_hb_vorrichtung001_layout_kin_Product.dae</Value>
+                </Attribute>
+                <Attribute Name="refType">
+                    <Value>explicit</Value>
+                </Attribute>
+            </ExternalInterface>
+        </InternalElement>
+    </InstanceHierarchy>
+    <InstanceHierarchy Name="result_q7"/>
+    <InstanceHierarchy Name="result_q8"/>
+    <InstanceHierarchy Name="result_q9"/>
+    <InstanceHierarchy Name="result_q10"/>
+</CAEXFile>

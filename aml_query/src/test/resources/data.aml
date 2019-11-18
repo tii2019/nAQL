@@ -20,13 +20,13 @@
          <InternalElement ID="AF138E59-0000-17AC-556E-B81A0000323F" Name="2">
             <InternalElement ID="AF138E59-0000-17AC-556E-B81A00003240" Name="3">
                <Attribute Name="Frame">
-                  <Attribute Name="x">
+                  <Attribute Name="x" Unit="m" AttributeDataType="xs:double">
                      <Value>-7.4</Value>
                   </Attribute>
-                  <Attribute Name="y">
+                  <Attribute Name="y" Unit="m" AttributeDataType="xs:double">
                      <Value>7.6</Value>
                   </Attribute>
-                  <Attribute Name="z">
+                  <Attribute Name="z" Unit="m" AttributeDataType="xs:double">
                      <Value>1</Value>
                   </Attribute>
                   <Attribute Name="rx">
@@ -43,13 +43,13 @@
             </InternalElement>
             <InternalElement ID="AF138E59-0000-17AC-556E-B84F00003262" Name="4">
                <Attribute Name="Frame">
-                  <Attribute Name="x">
+                  <Attribute Name="x" Unit="m" AttributeDataType="xs:double">
                      <Value>-4.558491</Value>
                   </Attribute>
-                  <Attribute Name="y">
+                  <Attribute Name="y" Unit="m" AttributeDataType="xs:double">
                      <Value>7.882722</Value>
                   </Attribute>
-                  <Attribute Name="z">
+                  <Attribute Name="z" Unit="m" AttributeDataType="xs:double">
                      <Value>0</Value>
                   </Attribute>
                   <Attribute Name="rx">
@@ -66,13 +66,13 @@
             </InternalElement>
             <InternalElement ID="AF138E59-0000-17AC-556E-B85100003266" Name="5">
                <Attribute Name="Frame">
-                  <Attribute Name="x">
+                  <Attribute Name="x" Unit="m" AttributeDataType="xs:double">
                      <Value>-7.366172</Value>
                   </Attribute>
-                  <Attribute Name="y">
+                  <Attribute Name="y" Unit="m" AttributeDataType="xs:double">
                      <Value>6.379493</Value>
                   </Attribute>
-                  <Attribute Name="z">
+                  <Attribute Name="z" Unit="m" AttributeDataType="xs:double">
                      <Value>2.394861</Value>
                   </Attribute>
                   <Attribute Name="rx">
@@ -92,13 +92,13 @@
          <InternalElement ID="AF138E59-0000-17AC-556E-B8BD000032A1" Name="6">
             <InternalElement ID="AF138E59-0000-17AC-556E-B8BD000032A2" Name="7">
                <Attribute Name="Frame">
-                  <Attribute Name="x">
+                  <Attribute Name="x" Unit="m" AttributeDataType="xs:double">
                      <Value>-9.3</Value>
                   </Attribute>
-                  <Attribute Name="y">
+                  <Attribute Name="y" Unit="m" AttributeDataType="xs:double">
                      <Value>2.8</Value>
                   </Attribute>
-                  <Attribute Name="z">
+                  <Attribute Name="z" Unit="m" AttributeDataType="xs:double">
                      <Value>1</Value>
                   </Attribute>
                   <Attribute Name="rx">
@@ -115,13 +115,13 @@
             </InternalElement>
             <InternalElement ID="AF138E59-0000-17AC-556E-B8F4000032C3" Name="8">
                <Attribute Name="Frame">
-                  <Attribute Name="x">
+                  <Attribute Name="x" Unit="m" AttributeDataType="xs:double">
                      <Value>-3.128421</Value>
                   </Attribute>
-                  <Attribute Name="y">
+                  <Attribute Name="y" Unit="m" AttributeDataType="xs:double">
                      <Value>0.936761</Value>
                   </Attribute>
-                  <Attribute Name="z">
+                  <Attribute Name="z" Unit="m" AttributeDataType="xs:double">
                      <Value>0</Value>
                   </Attribute>
                   <Attribute Name="rx">
@@ -138,13 +138,13 @@
             </InternalElement>
             <InternalElement ID="AF138E59-0000-17AC-556E-B8F6000032C7" Name="9">
                <Attribute Name="Frame">
-                  <Attribute Name="x">
+                  <Attribute Name="x" Unit="m" AttributeDataType="xs:double">
                      <Value>-7.491077</Value>
                   </Attribute>
-                  <Attribute Name="y">
+                  <Attribute Name="y" Unit="m" AttributeDataType="xs:double">
                      <Value>3.60465</Value>
                   </Attribute>
-                  <Attribute Name="z">
+                  <Attribute Name="z" Unit="m" AttributeDataType="xs:double">
                      <Value>2.650281</Value>
                   </Attribute>
                   <Attribute Name="rx">
@@ -164,13 +164,13 @@
          <InternalElement ID="AF138E59-0000-17AC-556E-B961000032DA" Name="10">
             <InternalElement ID="AF138E59-0000-17AC-556E-B961000032DB" Name="11">
                <Attribute Name="Frame">
-                  <Attribute Name="x">
+                  <Attribute Name="x" Unit="m" AttributeDataType="xs:double">
                      <Value>-9.7</Value>
                   </Attribute>
-                  <Attribute Name="y">
+                  <Attribute Name="y" Unit="m" AttributeDataType="xs:double">
                      <Value>4.6</Value>
                   </Attribute>
-                  <Attribute Name="z">
+                  <Attribute Name="z" Unit="m" AttributeDataType="xs:double">
                      <Value>1</Value>
                   </Attribute>
                   <Attribute Name="rx">
@@ -187,13 +187,13 @@
             </InternalElement>
             <InternalElement ID="AF138E59-0000-17AC-556E-B99B000032FC" Name="12">
                <Attribute Name="Frame">
-                  <Attribute Name="x">
+                  <Attribute Name="x" Unit="m" AttributeDataType="xs:double">
                      <Value>-4.555277</Value>
                   </Attribute>
-                  <Attribute Name="y">
+                  <Attribute Name="y" Unit="m" AttributeDataType="xs:double">
                      <Value>7.060808</Value>
                   </Attribute>
-                  <Attribute Name="z">
+                  <Attribute Name="z" Unit="m" AttributeDataType="xs:double">
                      <Value>0</Value>
                   </Attribute>
                   <Attribute Name="rx">
@@ -212,13 +212,13 @@
          </InternalElement>
          <InternalElement ID="AF138E59-0000-17AC-556E-BC030000331D" Name="13">
             <Attribute Name="Frame">
-               <Attribute Name="x">
+               <Attribute Name="x" Unit="m" AttributeDataType="xs:double">
                   <Value>-7.5</Value>
                </Attribute>
-               <Attribute Name="y">
+               <Attribute Name="y" Unit="m" AttributeDataType="xs:double">
                   <Value>4.87</Value>
                </Attribute>
-               <Attribute Name="z">
+               <Attribute Name="z" Unit="m" AttributeDataType="xs:double">
                   <Value>0</Value>
                </Attribute>
                <Attribute Name="rx">
@@ -241,13 +241,13 @@
             </ExternalInterface>
             <InternalElement ID="AF138E59-0000-17AC-556E-BC4600003328" Name="15">
                <Attribute Name="Frame">
-                  <Attribute Name="x">
+                  <Attribute Name="x" Unit="m" AttributeDataType="xs:double">
                      <Value>-1.365</Value>
                   </Attribute>
-                  <Attribute Name="y">
+                  <Attribute Name="y" Unit="m" AttributeDataType="xs:double">
                      <Value>0</Value>
                   </Attribute>
-                  <Attribute Name="z">
+                  <Attribute Name="z" Unit="m" AttributeDataType="xs:double">
                      <Value>-1.795</Value>
                   </Attribute>
                   <Attribute Name="rx">

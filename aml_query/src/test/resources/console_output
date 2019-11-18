@@ -1,0 +1,380 @@
+Trying to load package for model CAEX215
+Loading class CAEX215.CAEX215Package...
+
+-------------------q1--------------------
+import module namespace caex215 = "http://ipr.kit.edu/caex" at"/Users/aris/Documents/repositories/github/AutomationML/TII2019/aml_query/src/main/resources/caex.xqy";
+
+let $root := doc("src/test/resources/data.aml")/CAEXFile/InstanceHierarchy
+return (
+
+$root//InternalElement[RoleRequirements[@RefBaseRoleClassPath="AutomationMLExtendedRoleClassLib/Clamp"]]/ExternalInterface[@RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector/COLLADAInterface"]
+
+)
+
+RESULTS:1
+<ExternalInterface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="14" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector/COLLADAInterface" ID="32D1045E-5069-45BB-9DFB-DDA17BC7F27B">
+  <Attribute Name="refURI" AttributeDataType="xs:anyURI">
+    <Value>./dae_lib/F19721000063102000100_001_zb_hb_vorrichtung001_layout_kin_Product.dae</Value>
+  </Attribute>
+  <Attribute Name="refType">
+    <Value>explicit</Value>
+  </Attribute>
+</ExternalInterface>
+-------------------------------------------
+
+
+-------------------q2--------------------
+import module namespace caex215 = "http://ipr.kit.edu/caex" at"/Users/aris/Documents/repositories/github/AutomationML/TII2019/aml_query/src/main/resources/caex.xqy";
+
+let $root := doc("src/test/resources/data.aml")/CAEXFile/InstanceHierarchy
+return (
+
+$root/InternalElement[RoleRequirements[@RefBaseRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Structure"]]/InternalElement[@ID="AF138E59-0000-17AC-556E-BC030000331D"]
+
+)
+
+RESULTS:1
+<InternalElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="AF138E59-0000-17AC-556E-BC030000331D" Name="13">
+  <Attribute Name="Frame">
+    <Attribute Name="x" Unit="m" AttributeDataType="xs:double">
+      <Value>-7.5</Value>
+    </Attribute>
+    <Attribute Name="y" Unit="m" AttributeDataType="xs:double">
+      <Value>4.87</Value>
+    </Attribute>
+    <Attribute Name="z" Unit="m" AttributeDataType="xs:double">
+      <Value>0</Value>
+    </Attribute>
+    <Attribute Name="rx">
+      <Value>-180</Value>
+    </Attribute>
+    <Attribute Name="ry">
+      <Value>0</Value>
+    </Attribute>
+    <Attribute Name="rz">
+      <Value>0</Value>
+    </Attribute>
+  </Attribute>
+  <ExternalInterface Name="14" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector/COLLADAInterface" ID="32D1045E-5069-45BB-9DFB-DDA17BC7F27B">
+    <Attribute Name="refURI" AttributeDataType="xs:anyURI">
+      <Value>./dae_lib/F19721000063102000100_001_zb_hb_vorrichtung001_layout_kin_Product.dae</Value>
+    </Attribute>
+    <Attribute Name="refType">
+      <Value>explicit</Value>
+    </Attribute>
+  </ExternalInterface>
+  <InternalElement ID="AF138E59-0000-17AC-556E-BC4600003328" Name="15">
+    <Attribute Name="Frame">
+      <Attribute Name="x" Unit="m" AttributeDataType="xs:double">
+        <Value>-1.365</Value>
+      </Attribute>
+      <Attribute Name="y" Unit="m" AttributeDataType="xs:double">
+        <Value>0</Value>
+      </Attribute>
+      <Attribute Name="z" Unit="m" AttributeDataType="xs:double">
+        <Value>-1.795</Value>
+      </Attribute>
+      <Attribute Name="rx">
+        <Value>0</Value>
+      </Attribute>
+      <Attribute Name="ry">
+        <Value>0</Value>
+      </Attribute>
+      <Attribute Name="rz">
+        <Value>0</Value>
+      </Attribute>
+    </Attribute>
+    <RoleRequirements RefBaseRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Frame"/>
+  </InternalElement>
+  <InternalElement ID="AF138E59-0000-17AC-556E-BC460000332D" Name="16">
+    <RoleRequirements RefBaseRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Structure"/>
+  </InternalElement>
+  <RoleRequirements RefBaseRoleClassPath="AutomationMLExtendedRoleClassLib/Clamp"/>
+</InternalElement>
+-------------------------------------------
+
+
+-------------------q3--------------------
+import module namespace caex215 = "http://ipr.kit.edu/caex" at"/Users/aris/Documents/repositories/github/AutomationML/TII2019/aml_query/src/main/resources/caex.xqy";
+
+let $root := doc("src/test/resources/data.aml")/CAEXFile/InstanceHierarchy
+return (
+
+$root//InternalElement[InternalElement]/ExternalInterface[@RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector/COLLADAInterface"]
+
+)
+
+RESULTS:1
+<ExternalInterface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="14" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector/COLLADAInterface" ID="32D1045E-5069-45BB-9DFB-DDA17BC7F27B">
+  <Attribute Name="refURI" AttributeDataType="xs:anyURI">
+    <Value>./dae_lib/F19721000063102000100_001_zb_hb_vorrichtung001_layout_kin_Product.dae</Value>
+  </Attribute>
+  <Attribute Name="refType">
+    <Value>explicit</Value>
+  </Attribute>
+</ExternalInterface>
+-------------------------------------------
+
+
+-------------------q4--------------------
+import module namespace caex215 = "http://ipr.kit.edu/caex" at"/Users/aris/Documents/repositories/github/AutomationML/TII2019/aml_query/src/main/resources/caex.xqy";
+
+let $root := doc("src/test/resources/data.aml")/CAEXFile/InstanceHierarchy
+return (
+
+for $n0 in $root//InternalElement[InternalElement[RoleRequirements[@RefBaseRoleClassPath="AutomationMLExtendedRoleClassLib/Clamp"]]]
+	for $n2 in $n0/InternalElement[RoleRequirements[@RefBaseRoleClassPath="AutomationMLDMIRoleClassLib/DiscManufacturingEquipment/Robot"]], $n1 in $n0/InternalElement[RoleRequirements[@RefBaseRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Structure"]]
+	return (<r1>{
+		$n1,
+		$n2
+	}</r1>
+	)
+
+
+)
+
+RESULTS:2
+<r1>
+  <InternalElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="AF138E59-0000-17AC-556E-B85100003266" Name="5">
+    <Attribute Name="Frame">
+      <Attribute Name="x" Unit="m" AttributeDataType="xs:double">
+        <Value>-7.366172</Value>
+      </Attribute>
+      <Attribute Name="y" Unit="m" AttributeDataType="xs:double">
+        <Value>6.379493</Value>
+      </Attribute>
+      <Attribute Name="z" Unit="m" AttributeDataType="xs:double">
+        <Value>2.394861</Value>
+      </Attribute>
+      <Attribute Name="rx">
+        <Value>4.499</Value>
+      </Attribute>
+      <Attribute Name="ry">
+        <Value>90</Value>
+      </Attribute>
+      <Attribute Name="rz">
+        <Value>0</Value>
+      </Attribute>
+    </Attribute>
+    <RoleRequirements RefBaseRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Structure"/>
+  </InternalElement>
+  <InternalElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="AF138E59-0000-17AC-556E-B81A00003240" Name="3">
+    <Attribute Name="Frame">
+      <Attribute Name="x" Unit="m" AttributeDataType="xs:double">
+        <Value>-7.4</Value>
+      </Attribute>
+      <Attribute Name="y" Unit="m" AttributeDataType="xs:double">
+        <Value>7.6</Value>
+      </Attribute>
+      <Attribute Name="z" Unit="m" AttributeDataType="xs:double">
+        <Value>1</Value>
+      </Attribute>
+      <Attribute Name="rx">
+        <Value>0</Value>
+      </Attribute>
+      <Attribute Name="ry">
+        <Value>0</Value>
+      </Attribute>
+      <Attribute Name="rz">
+        <Value>0</Value>
+      </Attribute>
+    </Attribute>
+    <RoleRequirements RefBaseRoleClassPath="AutomationMLDMIRoleClassLib/DiscManufacturingEquipment/Robot"/>
+  </InternalElement>
+</r1>
+<r1>
+  <InternalElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="AF138E59-0000-17AC-556E-B8F6000032C7" Name="9">
+    <Attribute Name="Frame">
+      <Attribute Name="x" Unit="m" AttributeDataType="xs:double">
+        <Value>-7.491077</Value>
+      </Attribute>
+      <Attribute Name="y" Unit="m" AttributeDataType="xs:double">
+        <Value>3.60465</Value>
+      </Attribute>
+      <Attribute Name="z" Unit="m" AttributeDataType="xs:double">
+        <Value>2.650281</Value>
+      </Attribute>
+      <Attribute Name="rx">
+        <Value>73.172</Value>
+      </Attribute>
+      <Attribute Name="ry">
+        <Value>34.473</Value>
+      </Attribute>
+      <Attribute Name="rz">
+        <Value>97.709</Value>
+      </Attribute>
+    </Attribute>
+    <RoleRequirements RefBaseRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Structure"/>
+  </InternalElement>
+  <InternalElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="AF138E59-0000-17AC-556E-B8BD000032A2" Name="7">
+    <Attribute Name="Frame">
+      <Attribute Name="x" Unit="m" AttributeDataType="xs:double">
+        <Value>-9.3</Value>
+      </Attribute>
+      <Attribute Name="y" Unit="m" AttributeDataType="xs:double">
+        <Value>2.8</Value>
+      </Attribute>
+      <Attribute Name="z" Unit="m" AttributeDataType="xs:double">
+        <Value>1</Value>
+      </Attribute>
+      <Attribute Name="rx">
+        <Value>0</Value>
+      </Attribute>
+      <Attribute Name="ry">
+        <Value>0</Value>
+      </Attribute>
+      <Attribute Name="rz">
+        <Value>0</Value>
+      </Attribute>
+    </Attribute>
+    <RoleRequirements RefBaseRoleClassPath="AutomationMLDMIRoleClassLib/DiscManufacturingEquipment/Robot"/>
+  </InternalElement>
+</r1>
+-------------------------------------------
+
+
+-------------------q5--------------------
+import module namespace caex215 = "http://ipr.kit.edu/caex" at"/Users/aris/Documents/repositories/github/AutomationML/TII2019/aml_query/src/main/resources/caex.xqy";
+
+let $root := doc("src/test/resources/data.aml")/CAEXFile/InstanceHierarchy
+return (
+
+$root//InternalElement[RoleRequirements[@RefBaseRoleClassPath="AutomationMLDMIRoleClassLib/DiscManufacturingEquipment/Robot"] and Attribute[@Name="Frame" and Attribute[@Name="y" and @Unit="m" and Value<5]]]
+
+)
+
+RESULTS:2
+<InternalElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="AF138E59-0000-17AC-556E-B8BD000032A2" Name="7">
+  <Attribute Name="Frame">
+    <Attribute Name="x" Unit="m" AttributeDataType="xs:double">
+      <Value>-9.3</Value>
+    </Attribute>
+    <Attribute Name="y" Unit="m" AttributeDataType="xs:double">
+      <Value>2.8</Value>
+    </Attribute>
+    <Attribute Name="z" Unit="m" AttributeDataType="xs:double">
+      <Value>1</Value>
+    </Attribute>
+    <Attribute Name="rx">
+      <Value>0</Value>
+    </Attribute>
+    <Attribute Name="ry">
+      <Value>0</Value>
+    </Attribute>
+    <Attribute Name="rz">
+      <Value>0</Value>
+    </Attribute>
+  </Attribute>
+  <RoleRequirements RefBaseRoleClassPath="AutomationMLDMIRoleClassLib/DiscManufacturingEquipment/Robot"/>
+</InternalElement>
+<InternalElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="AF138E59-0000-17AC-556E-B961000032DB" Name="11">
+  <Attribute Name="Frame">
+    <Attribute Name="x" Unit="m" AttributeDataType="xs:double">
+      <Value>-9.7</Value>
+    </Attribute>
+    <Attribute Name="y" Unit="m" AttributeDataType="xs:double">
+      <Value>4.6</Value>
+    </Attribute>
+    <Attribute Name="z" Unit="m" AttributeDataType="xs:double">
+      <Value>1</Value>
+    </Attribute>
+    <Attribute Name="rx">
+      <Value>0</Value>
+    </Attribute>
+    <Attribute Name="ry">
+      <Value>0</Value>
+    </Attribute>
+    <Attribute Name="rz">
+      <Value>90</Value>
+    </Attribute>
+  </Attribute>
+  <RoleRequirements RefBaseRoleClassPath="AutomationMLDMIRoleClassLib/DiscManufacturingEquipment/Robot"/>
+</InternalElement>
+-------------------------------------------
+
+
+-------------------q6--------------------
+import module namespace caex215 = "http://ipr.kit.edu/caex" at"/Users/aris/Documents/repositories/github/AutomationML/TII2019/aml_query/src/main/resources/caex.xqy";
+
+let $root := doc("src/test/resources/data.aml")/CAEXFile/InstanceHierarchy
+return (
+
+$root//InternalElement[InternalElement[RoleRequirements[@RefBaseRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Structure"]]]/ExternalInterface[@RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector/COLLADAInterface" and Attribute[Value="./dae_lib/F19721000063102000100_001_zb_hb_vorrichtung001_layout_kin_Product.dae"]]
+
+)
+
+RESULTS:1
+<ExternalInterface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="14" RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/ExternalDataConnector/COLLADAInterface" ID="32D1045E-5069-45BB-9DFB-DDA17BC7F27B">
+  <Attribute Name="refURI" AttributeDataType="xs:anyURI">
+    <Value>./dae_lib/F19721000063102000100_001_zb_hb_vorrichtung001_layout_kin_Product.dae</Value>
+  </Attribute>
+  <Attribute Name="refType">
+    <Value>explicit</Value>
+  </Attribute>
+</ExternalInterface>
+-------------------------------------------
+
+
+-------------------q7--------------------
+import module namespace caex215 = "http://ipr.kit.edu/caex" at"/Users/aris/Documents/repositories/github/AutomationML/TII2019/aml_query/src/main/resources/caex.xqy";
+
+let $root := doc("src/test/resources/data.aml")/CAEXFile/InstanceHierarchy
+return (
+
+$root//InternalElement[RoleRequirements[@RefBaseRoleClassPath="AutomationMLDMIRoleClassLib/DiscManufacturingEquipment/Robot"] and Attribute[@Name="Frame" and RefSemantic[@CorrespondingAttributePath="abc"]]]
+
+)
+
+RESULTS:0
+-------------------------------------------
+
+
+-------------------q8--------------------
+import module namespace caex215 = "http://ipr.kit.edu/caex" at"/Users/aris/Documents/repositories/github/AutomationML/TII2019/aml_query/src/main/resources/caex.xqy";
+
+let $root := doc("src/test/resources/data.aml")/CAEXFile/InstanceHierarchy
+return (
+
+for $n0 in $root//InternalElement[count(InternalElement[RoleRequirements[@RefBaseRoleClassPath="AutomationMLExtendedRoleClassLib/Clamp"]])>=2]
+	for $n2 in $n0/InternalElement[RoleRequirements[@RefBaseRoleClassPath="AutomationMLDMIRoleClassLib/DiscManufacturingEquipment/Robot"]], $n1 in $n0/InternalElement[RoleRequirements[@RefBaseRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Structure"]]
+	return (<r1>{
+		$n1,
+		$n2
+	}</r1>
+	)
+
+
+)
+
+RESULTS:0
+-------------------------------------------
+
+
+-------------------q9--------------------
+generator.XPathGenerator.handleInternalLink: partner ID not found in query and data, ignored...
+import module namespace caex215 = "http://ipr.kit.edu/caex" at"/Users/aris/Documents/repositories/github/AutomationML/TII2019/aml_query/src/main/resources/caex.xqy";
+
+let $root := doc("src/test/resources/data.aml")/CAEXFile/InstanceHierarchy
+return (
+
+$root//InternalElement[ExternalInterface[@RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/AttachmentInterface"]]
+
+)
+
+RESULTS:0
+-------------------------------------------
+
+
+-------------------q10--------------------
+import module namespace caex215 = "http://ipr.kit.edu/caex" at"/Users/aris/Documents/repositories/github/AutomationML/TII2019/aml_query/src/main/resources/caex.xqy";
+
+let $root := doc("src/test/resources/data.aml")/CAEXFile/InstanceHierarchy
+return (
+
+$root//InternalElement[ExternalInterface[caex215:connectsToAny(., $root//ExternalInterface[@RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/AttachmentInterface"]) and @RefBaseClassPath="AutomationMLInterfaceClassLib/AutomationMLBaseInterface/AttachmentInterface"]]
+
+)
+
+RESULTS:0
+-------------------------------------------
+
