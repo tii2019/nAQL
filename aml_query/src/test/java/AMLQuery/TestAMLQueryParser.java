@@ -59,6 +59,21 @@ public class TestAMLQueryParser {
 		return queries;
 	}
 	
+	public List<GenericTreeNode<GenericAMLConceptModel<AMLQueryConfig>>> readQuery2 () throws InstantiationException, IllegalAccessException{
+		
+		List<GenericTreeNode<GenericAMLConceptModel<AMLQueryConfig>>> queries = new ArrayList<GenericTreeNode<GenericAMLConceptModel<AMLQueryConfig>>>();
+		
+		for(InstanceHierarchyType ih : queryAML.getInstanceHierarchy()) {
+			if(ih.getName().startsWith("q")) {
+				InternalElementType queryObj = ih.getInternalElement().get(0);
+				GenericTreeNode<GenericAMLConceptModel<AMLQueryConfig>> root = GenericAMLConceptModelUtils.parse(queryObj, AMLQueryConfig.class);
+				queries.add(root);				
+			}
+		}
+				
+		return queries;
+	}
+	
 	public List<InternalElementType> readIE (String sourceFile) throws ParserConfigurationException, SAXException, IOException, DOMException, DatatypeConfigurationException {
 		
 		AMLParser parser = new AMLParser(sourceFile);

@@ -53,8 +53,7 @@ public class AMLQueryDemo extends TestAMLQueryParser{
 		this.config = config;
 	}
 	
-	public String toXQuery (GenericTreeNode<GenericAMLConceptModel<AMLQueryConfig>> query, boolean semantically, boolean withLink, boolean simple) {
-		System.out.println("\n-------------------" + query.data.getObj().getName() + "--------------------");									
+	public String toXQuery (GenericTreeNode<GenericAMLConceptModel<AMLQueryConfig>> query, boolean semantically, boolean withLink, boolean simple) {										
 		XQueryGenerator queryGen = new XQueryGenerator(query, config.getDatafile(), rootPath);
 						
 		String xquery = queryGen.translateToXQuery(semantically, withLink, simple);
@@ -67,7 +66,8 @@ public class AMLQueryDemo extends TestAMLQueryParser{
 		return xquery;
 	} 
 	
-	public String toXQuery(GenericTreeNode<GenericAMLConceptModel<AMLQueryConfig>> query) {
+	public String toXQuery(GenericTreeNode<GenericAMLConceptModel<AMLQueryConfig>> query, String queryName) {
+		System.out.println("\n-------------------" + queryName + "--------------------");
 		return toXQuery(query, config.isSemantically(), config.isWithLink(), config.isSimpleOutput());
 	}
 	
@@ -99,7 +99,7 @@ public class AMLQueryDemo extends TestAMLQueryParser{
 		String resultfile = "src/test/resources/output.aml";
 		
 		AMLExporter exporter = new AMLExporter();
-		CAEXFileType caex = CAEX215Factory.eINSTANCE.createCAEXFileType();
+		CAEXFileType amlOutput = CAEX215Factory.eINSTANCE.createCAEXFileType();
 		
 		
 		// this is the config of the query framework
@@ -114,10 +114,11 @@ public class AMLQueryDemo extends TestAMLQueryParser{
 		demoConfig.setQueryfile(queryfile);
 		// set data file
 		demoConfig.setDatafile(data_excerpt);
+//		demoConfig.setDatafile(data_original);
 		// with link
 		demoConfig.setWithLink(true);
 		// semantically
-		demoConfig.setSemantically(true);
+		demoConfig.setSemantically(false);
 		// simple output
 //		demoConfig.setSimpleOutput(true);
 
@@ -128,38 +129,39 @@ public class AMLQueryDemo extends TestAMLQueryParser{
 		// link: example queries with internal link constraints
 		// further: further example queries
 		// complex: complex query examples
-		String tii = "TII2019Examples";
-		String link = "LinkExamples";
-		String further = "FurtherExamples";
-		String complex = "ComplexExamples";
-		List<GenericTreeNode<GenericAMLConceptModel<AMLQueryConfig>>> queries = demo.readQuery(tii);
+//		String tii = "TII2019Examples";
+//		String link = "LinkExamples";
+//		String further = "FurtherExamples";
+//		String complex = "ComplexExamples";
+//		List<GenericTreeNode<GenericAMLConceptModel<AMLQueryConfig>>> queries = demo.readQuery(tii);
+		List<GenericTreeNode<GenericAMLConceptModel<AMLQueryConfig>>> queries = demo.readQuery2();
+		int id = 1;
 		for(GenericTreeNode<GenericAMLConceptModel<AMLQueryConfig>> query : queries) {		
 			
-			if(query.data.getObj().getName().contains("q")) {	
-				String xqueryCommand = demo.toXQuery(query);
-				Value result = demo.executeXQuery(xqueryCommand);						
-				System.out.println("\nRESULTS:" + result.size());	
-				for(Item r : result) {
-					System.out.println(r.serialize());
-				}					
+			String queryName = "q" + Integer.toString(id++);
+			String xqueryCommand = demo.toXQuery(query, queryName);
+			Value result = demo.executeXQuery(xqueryCommand);						
+			System.out.println("\nRESULTS:" + result.size());	
+			for(Item r : result) {
+				System.out.println(r.serialize());
+			}					
+			
+			// Simple results are only some strings, can not be stored in AML files
+			if(!demoConfig.isSimpleOutput()) {
+				BaseX2AMLConverter serializer = new BaseX2AMLConverter();				
+				InstanceHierarchyType ih = CAEX215Factory.eINSTANCE.createInstanceHierarchyType();
+				ih.setName("result_" + queryName);
 				
-				// Simple results are only some strings, can not be stored in AML files
-				if(!demoConfig.isSimpleOutput()) {
-					BaseX2AMLConverter serializer = new BaseX2AMLConverter();				
-					InstanceHierarchyType ih = CAEX215Factory.eINSTANCE.createInstanceHierarchyType();
-					ih.setName("result_" + query.data.getObj().getName());
-					
-					if(serializer.toCaex(result, ih))
-						caex.getInstanceHierarchy().add(ih);
-				}
-				
-				System.out.println("-------------------------------------------\n");
-			}						
+				if(serializer.toCaex(result, ih))
+					amlOutput.getInstanceHierarchy().add(ih);
+			}
+			
+			System.out.println("-------------------------------------------\n");						
 		}
 		
 		// Simple results are only some strings, can not be stored in AML files
 		if(!demoConfig.isSimpleOutput())
-			exporter.write(caex, resultfile);
+			exporter.write(amlOutput, resultfile);
    }
 	
 }
