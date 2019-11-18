@@ -204,14 +204,19 @@ public class AMLLinkCollector {
 	 * @return
 	 */
 	private static String getEIIdFromFile (EILinkRefSide ei, CAEXFileType caexFile) {
-		if(getEIFromFile(ei, caexFile) == null) {
-			StackTraceElement[] stackTrace = new Throwable().getStackTrace();
-			System.err.println(stackTrace[0].getClassName() + "." + stackTrace[0].getMethodName() + ": can not find the EI [" + ei.getIEId() + ":" + ei.getEIName() + "]");			
-			return null;
+//		if(getEIFromFile(ei, caexFile) == null) {
+//			StackTraceElement[] stackTrace = new Throwable().getStackTrace();
+//			System.err.println(stackTrace[0].getClassName() + "." + stackTrace[0].getMethodName() + ": can not find the EI [" + ei.getIEId() + ":" + ei.getEIName() + "] in " + caexFile.getFileName());			
+//			return null;
+//		}
+//		else {
+//			return getEIFromFile(ei, caexFile).getID();
+//		}		
+		ExternalInterfaceType found = getEIFromFile(ei, caexFile);
+		if(found != null) {
+			return found.getID();
 		}
-		else {
-			return getEIFromFile(ei, caexFile).getID();
-		}		
+		return null;
 	}
 	
 	/**
@@ -222,8 +227,8 @@ public class AMLLinkCollector {
 	private static ExternalInterfaceType getEIFromFile (EILinkRefSide ei, CAEXFileType caexFile) {
 		
 		if(ei.getIEId() == null) {			
-			StackTraceElement[] stackTrace = new Throwable().getStackTrace();
-			System.err.println(stackTrace[0].getClassName() + "." + stackTrace[0].getMethodName() + ": can not find the IE [" + ei.getIEId() + "]");			
+//			StackTraceElement[] stackTrace = new Throwable().getStackTrace();
+//			System.err.println(stackTrace[0].getClassName() + "." + stackTrace[0].getMethodName() + ": can not find the IE [" + ei.getIEId() + "] in " + caexFile.getFileName());			
 			return null;
 		}
 			
@@ -234,8 +239,8 @@ public class AMLLinkCollector {
 					return candidate;
 			}
 		}else {
-			StackTraceElement[] stackTrace = new Throwable().getStackTrace();
-			System.err.println(stackTrace[0].getClassName() + "." + stackTrace[0].getMethodName() + ": can not find the EI [" + ei.getIEId() + ":" + ei.getEIName() + "]");
+//			StackTraceElement[] stackTrace = new Throwable().getStackTrace();
+//			System.err.println(stackTrace[0].getClassName() + "." + stackTrace[0].getMethodName() + ": can not find the EI [" + ei.getIEId() + ":" + ei.getEIName() + "] in "  + caexFile.getFileName());
 			return null;
 		}	
 		
