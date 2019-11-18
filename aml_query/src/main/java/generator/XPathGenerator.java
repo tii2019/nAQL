@@ -15,6 +15,7 @@ import CAEX215.InternalElementType;
 import CAEX215.InternalLinkType;
 import CAEX215.NominalScaledTypeType;
 import CAEX215.OrdinalScaledTypeType;
+import CAEX215.RefSemanticType;
 import CAEX215.RoleClassType;
 import CAEX215.RoleFamilyType;
 import CAEX215.RoleRequirementsType;
@@ -303,13 +304,12 @@ public class XPathGenerator {
 		if (defaultValue != null && !defaultValue.isEmpty())
 			expr += " and DefaultValue=" + toXQueryString(defaultValue);
 		
-		// TODO: refsemantics
-//		List<RefSemanticType> semantics = attr.getRefSemantic();
-//		for (int i = 0; i < semantics.size(); i++)
-//		{
-//			String spath = semantics.get(i).getCorrespondingAttributePath();
-//			expr += "RefSemantic[@CorrespondingAttributePath=" + toXQueryString(spath) + "] and ";
-//		}
+		List<RefSemanticType> semantics = attr.getRefSemantic();
+		for (int i = 0; i < semantics.size(); i++)
+		{
+			String spath = semantics.get(i).getCorrespondingAttributePath();
+			expr += "RefSemantic[@CorrespondingAttributePath=" + toXQueryString(spath) + "] and ";
+		}
 		
 		if(recursive){
 			for(AttributeType child : attr.getAttribute()) {
@@ -478,7 +478,7 @@ public class XPathGenerator {
 		// right now, we only consider one step link: so no chains
 		// is chained links really usefu?? 
 		else if(partner.getType().equals(EILinkRefSide.EndpointType.QUERY)) {
-			ExternalInterfaceType partnerEI = AMLLinkCollector.getEI(partner); 					
+			ExternalInterfaceType partnerEI = AMLLinkCollector.getEI(partner); 	
 			if(GenericAMLConceptModelUtils.isAMLConceptModel(partnerEI)) {
 				try {
 					GenericTreeNode<GenericAMLConceptModel<AMLQueryConfig>> partnerNode = GenericAMLConceptModelUtils.parse(partnerEI, AMLQueryConfig.class);
