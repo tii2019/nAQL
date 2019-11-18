@@ -26,18 +26,18 @@ There are several resource files stored at `aml_query/src/test/resource/`:
 
 * The excerpt of the original AML data used in the paper is stored in `data.aml`.
 
-* The (simple) console output of the experiments are stored in `console_output_tii.txt`. Simple means that we are only printing the names of the result XML elements, see below.
+* The (simple) console output of the experiments are stored in `console_output.txt`. Simple means that we are only printing the names of the result XML elements. The results are consistent with the examples in the paper.
+
+* The Automation serialization of the outputs can be found in `output_excerpt.aml` and `output_original.aml`.
 
 
 ## Provided Examples
 
 In the file `aml_query/src/test/resource/query.aml`, there are four CAEX instance hierarchies containing various query examples:
 
-* TII2019Examples: queries shown in the paper
-* LinkExamples: queries that contain internal links, also shown in the paper
-* FutherExamples: queries that are not shown in the paper but can be tested on the `data.aml` and `RobotCell.aml` files.
-* ComplexExamples: complex queries that are not shown in the paper. They will produce empty sets on the given data files. You can also add your own query models here.
-
+* q1-q8: queries shown in the paper. Can be tested on both the excerpt or the original AML data file.
+* q9: query that contain an internal link to an object in the data (A2). Needs to be tested on the original AML data file.
+* q10: query that contain an internal link to an anonymous object (A3). Needs to be tested on the original AML data file.
 
 
 ## Generate new nAQL Models 
